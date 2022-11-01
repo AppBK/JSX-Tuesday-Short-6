@@ -2,6 +2,7 @@ import { Route, Switch, NavLink } from 'react-router-dom';
 import Home from './components/Home';
 import Stocks from './components/Stocks';
 import Movies from './components/Movies';
+import { movies } from './data/movieData.js';
 
 function App() {
   return (
@@ -52,7 +53,7 @@ function App() {
           <Stocks />
         </Route>
         <Route path='/movies'>
-          <Movies />
+          <Movies movies={movies}/>
         </Route>
         <Route path='/not-logged-in'>
           <h1> You Must Be Logged In to Enter.</h1>
